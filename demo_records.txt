@@ -1,0 +1,15 @@
+Generate a number of fake medical records for ER patients, as pdf or docx files using the following layout:
+
+Patient: <patient id code>
+Gender identity: <M/F>
+DOB: <yyyy-mm-dd>
+Date of visit:s
+Reason for hospitalization:
+ICD10 code:
+Known allergies:
+Pre-existing conditions:
+Medication history:
+Treatment received:
+Medicine prescribed:
+Follow up: <yes/no>
+Follow up date: <yyyy-mm-dd / NA>
