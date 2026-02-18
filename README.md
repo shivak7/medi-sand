@@ -1,10 +1,30 @@
-This final reference document compiles all the modules built for my **Local Laptop + Dual 3090 Server** architecture. You can copy these into separate `.py` files or a single integrated notebook.
+This reference document compiles all the modules built for my **Local Laptop + Dual 3090 Server** architecture. You can copy these into separate `.py` files or a single integrated notebook.
 
 ---
 
-# **Local Medical Intelligence Pipeline: Final Reference**
+# **Local Medical Intelligence Pipeline: Reference**
 
 **Architecture:** Laptop (Docling + FAISS + Embeddings)  Server (Gemma 3 27B + llama.cpp)
+
+---
+
+### **0. Data:** 
+Artificially created medical data records made using Gemini 3.0. Primary fields are:
+
+Patient: <patient id code>
+Gender identity: <M/F>
+DOB: <yyyy-mm-dd>
+Date of visit:
+Reason for hospitalization:
+ICD10 code:
+Vital signs:
+Known allergies:
+Pre-existing conditions:
+Medication history:
+Treatment received:
+Medicine prescribed:
+Follow up: <yes/no>
+Follow up date: <yyyy-mm-dd/NA>
 
 ---
 
