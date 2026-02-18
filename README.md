@@ -11,20 +11,20 @@ This reference document compiles all the modules built for my **Local Laptop + D
 ### **0. Data:** 
 Artificially created medical data records made using Gemini 3.0. Primary fields are:
 
-Patient: <patient id code>
-Gender identity: <M/F>
-DOB: <yyyy-mm-dd>
-Date of visit:
-Reason for hospitalization:
-ICD10 code:
-Vital signs:
-Known allergies:
-Pre-existing conditions:
-Medication history:
-Treatment received:
-Medicine prescribed:
-Follow up: <yes/no>
-Follow up date: <yyyy-mm-dd/NA>
+Patient: <patient id code> \
+Gender identity: <M/F> \
+DOB: <yyyy-mm-dd> \
+Date of visit: \
+Reason for hospitalization: \
+ICD10 code: \
+Vital signs: \
+Known allergies: \
+Pre-existing conditions: \
+Medication history: \
+Treatment received: \
+Medicine prescribed: \
+Follow up: <yes/no> \
+Follow up date: <yyyy-mm-dd/NA> \
 
 ---
 
