@@ -24,7 +24,7 @@ Medication history: \
 Treatment received: \
 Medicine prescribed: \
 Follow up: <yes/no> \
-Follow up date: <yyyy-mm-dd/NA> \
+Follow up date: <yyyy-mm-dd/NA>\
 
 ---
 
