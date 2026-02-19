@@ -25,7 +25,7 @@ Treatment received: \
 Medicine prescribed: \
 Discharge Status: \
 Follow up: <yes/no> \
-Follow up date: <yyyy-mm-dd/NA>
+Follow up date: <yyyy-mm-dd/NA> \
 Doctor's notes: 
 
 ---
