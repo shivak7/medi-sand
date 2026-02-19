@@ -1,10 +1,10 @@
-This reference document compiles all the modules built for my **Local Laptop + Dual 3090 Server** architecture. You can copy these into separate `.py` files or a single integrated notebook.
+This reference document compiles all the modules built for my **Local PC/Mac +  Dual 3090 Server** architecture.
 
 ---
 
 # **Local Medical Intelligence Pipeline: Reference**
 
-**Architecture:** Laptop (Docling + FAISS + Embeddings)  Server (Gemma 3 27B + llama.cpp)
+**Architecture:** Local PC/Mac (Docling + FAISS + Embeddings)  Server (Gemma 3 27B + llama.cpp)
 
 ---
 
@@ -23,14 +23,16 @@ Pre-existing conditions: \
 Medication history: \
 Treatment received: \
 Medicine prescribed: \
+Discharge Status: \
 Follow up: <yes/no> \
 Follow up date: <yyyy-mm-dd/NA>
+Doctor's notes: 
 
 ---
 
 ### **1. Server Setup (The Host)**
 
-Run this command on your dual RTX 3090 server to ensure the 128k context window and GPU offloading are active.
+Run this command on the GPU server to ensure the 128k context window and GPU offloading are active.
 
 ```bash
 # Ensure you are using the build with CUDA support
@@ -97,7 +99,7 @@ This script performs the "Retrieve and Prompt" logic, sending focused context to
 import requests
 
 class MedicalOrchestrator:
-    def __init__(self, indexer, server_url="http://viropa:8001"):
+    def __init__(self, indexer, server_url="http://localhost:8001"):
         self.indexer = indexer
         self.server_url = server_url
 
@@ -136,7 +138,7 @@ class MedicalOrchestrator:
 Use this for the "Scenario A" lane (direct processing of smaller PDFs).
 
 ```python
-def extract_structured_data(markdown_content, server_url="http://viropa:8001"):
+def extract_structured_data(markdown_content, server_url="http://localhost:8001"):
     prompt = (
         "Extract every patient record from the text below. "
         "Return ONLY a JSON array of objects. Schema: [patient_id, icd10_codes, summary].\n\n"
@@ -160,7 +162,7 @@ def extract_structured_data(markdown_content, server_url="http://viropa:8001"):
 ### **Summary of Logic Flow**
 
 1. **Ingest:** Docling converts PDF  Markdown locally on your laptop.
-2. **Route:** Check token count via `viropa:8001/tokenize`.
+2. **Route:** Check token count via `localhost:8001/tokenize`.
 3. **Path A (Small):** Send full Markdown to Server for JSON extraction.
 4. **Path B (Massive):** * Chunk text locally.
 * Embed and save to FAISS index locally.
